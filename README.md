@@ -30,13 +30,16 @@ If each protein ($P$) had a synthesis rate ($S$) following zero-order kinetics, 
  
 Total $P_M$ (mixed) $=$ $S \times t  \times$  $H_A$% $\times$ $(1-H_A$% $) \times 2$ (as both Lys had an equal chance to be heavy) <br>
 Total $P_H$ (heavy) $= S \times t \times H_A$% $\times$ $H_A$% <br>
-The ratio of the mixed to the heavy peptide ${ R (=  \frac{P_M}{P_H}  ) =   \frac{(1-H_A\%) \times 2}{H_A\%}}$ was independent of synthesis rates. <br>
-Thus,
-                                         HA% = 2/((2+R))                                 
-                                         LA% = 1-HA%
-We can use the above simple equations to derive the averaged LA% during the pulse (e.g., eight days) based on double-K-peptides. As the L% is dynamic, the L% on day 8 was not equal to the averaged LA% in 8 days. We should be able to fit the averaged LA% in 8 days to derive L% on day 8. 
-The free lysine estimation process was like the quantification process. Unlike the quantification process, we derived double Lys PSM during the loading bias correction instead of single Lys PSM. Moreover, we inspected mixed and heavy PSMs in the TMT noise correction step and summarized them only to peptide level. The MS1 level quantification to peptide level and the mathematical procedure helped get the free lysine pSILAC ratio. 
+The ratio of the mixed to the heavy peptide ${ R (=  \frac{P_M}{P_H}  ) =   \frac{(1-H_A) \times 2}{H_A}}$ was independent of synthesis rates. <br>
+Thus, <br>
+                                         $H_A$% $= \frac{2}{(2+R)}$    <br>                             
+                                         $L_A$% $= 1-H_A$% <br>
+We can use the above simple equations to derive the averaged $L_A$% during the pulse (e.g., eight days) based on double-K-peptides. <br>
+As the $L$% is dynamic, the $L$% on day 8 was not equal to the averaged $L_A$% in 8 days. We should be able to fit the averaged $L_A$% in 8 days to derive $L$% on day 8. <bR> 
 
+<div align="justify"> 
+The free lysine estimation process was like the quantification process. Unlike the quantification process, we derived double Lys PSM during the loading bias correction instead of single Lys PSM. Moreover, we inspected mixed and heavy PSMs in the TMT noise correction step and summarized them only to peptide level. The MS1 level quantification to peptide level and the mathematical procedure helped get the free lysine pSILAC ratio. 
+</div>
 
 
 
