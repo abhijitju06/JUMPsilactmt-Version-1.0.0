@@ -1,0 +1,29 @@
+# SILAC-TMT data processing; parameter file for combining batches
+# Author: Surendhar and Abhijit modified:02-07-2024
+
+#Input file
+batch1 = /home/adasgupt/Protein_quan_Batch1 
+batch2 = /home/adasgupt/Protein_quan_Batch2
+
+
+output_folder = combinedAD2021_ms1_ADG #if output_folder already exists, output folder named with suffix "_1" or "_2"  or so on will be generated automatically in the same folder where the program excuted; 
+
+tmt_reporters_used 	= sig126; sig127N; sig127C; sig128N; sig128C; sig129N; sig129C; sig130N; sig130C; sig131N; sig131C; sig132N; sig132C; sig133N; sig133C; sig134N
+
+#information of biological replicates and their genotypes
+WT1 = b1_sig127N, b1_sig127C, b1_sig128N, b1_sig128C, b1_sig129N
+WT2 = b1_sig129C, b1_sig130N, b1_sig130C, b1_sig131N, b1_sig131C
+WT3 = b2_sig127N, b2_sig127C, b2_sig128N, b2_sig128C, b2_sig129N
+FAD1= b1_sig132N, b1_sig132C, b1_sig133N, b1_sig133C, b1_sig134N
+FAD2= b2_sig129C, b2_sig130N, b2_sig130C, b2_sig131N, b2_sig131C
+FAD3= b2_sig132N, b2_sig132C, b2_sig133N, b2_sig133C, b2_sig134N
+
+# Outlier removal
+
+free_Lys_ratio			    = 1, 0.745, 0.637, 0.497, 0.35  # free-Lys measured by independent experiment
+free_Lys_outlier 		    = 2   # remove data points faster than free-Lys dynamics;0 = No; 1 = Peptide/Protein level; 2 = change the outlier data points to the same levels of free Lys; 
+degradation_pattern_outlier = 1 # 0 = No; 1 = at mean Peptide/Protein of three bilogical replicates;remove data points with unusual degradation pattern;  
+
+########  END of Parameter file #################
+
+

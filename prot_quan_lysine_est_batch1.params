@@ -1,0 +1,100 @@
+# SILAC-TMT data processing parameter file V1.0.0 and The Free Lysine Estimation Parameter file V1.0.0
+# JUMPsilactmt V1.0.0
+# Author : Surendhar Chepyala and Abhijit Dasgupta
+# Last Modified by Abhijit on date:02-06-2024
+
+#Input files
+# input the PSM quantification data file if you already have 
+#psm_quant       = /home/adasgupt/quan_psm_impurity_corrected.txt
+# when PSM quantification data is available, comment  the idtxt file; this save time of quantification
+idtxt         = /home/adasgupt/batch_id_results/batch1/sum_out/ID.txt
+id_res_folder   = /home/adasgupt/batch_id_results/batch1/sum_out/publications
+output_folder_protein   = Protein_quan_Batch1   #if output_folder already exists, output folder named with suffix "_1" or "_2"  or so on will be generated automatically in the same folder where the program excuted; 
+output_folder_lysine   = Batch1_freeLys_estimation   #if output_folder already exists, output folder named with suffix "_1" or "_2"  or so on will be generated automatically in the same folder where the program excuted; 
+
+# TMT reporter information
+tmt_reporters_used 	= sig126; sig127N; sig127C; sig128N; sig128C; sig129N; sig129C; sig130N; sig130C; sig131N; sig131C; sig132N; sig132C; sig133N; sig133C; sig134N
+
+# mz shift correction after 1st round of extraction
+mz_shift_correction 			= 1 # 1 = Yes; 0 = No; Calculate m/z shift of all MS2 scans and correct in second round 
+tmt_peak_extraction_second_sd 	= 8					# SD used for identification of reporter ions
+tmt_peak_extraction_method 		= 1						# 1 = strongest intensity; 2 = closest to expected report ion mass; only if multiple peaks detected within mass tolerance
+
+# Impurity correction parameters
+impurity_correction = 1			# 1 = Yes; 0 = No; if only a part of reporters are used, it should be set to 0
+impurity_matrix 	= /hpcf/authorized_apps/proteomics_apps/pipeline/release/version1.13.0/JUMPq/TMT16.ini	# impurity table for correction
+
+# sample information in for each sets of pulse experiment
+set_1 			= sig127N, sig127C, sig128N, sig128C, sig129N
+set_2 			= sig129C, sig130N, sig130C, sig131N, sig131C
+set_3  			= sig132N, sig132C, sig133N, sig133C, sig134N
+
+# Loading-bias correction by non-Lys PSMs to remove systematic biases of mass spectrometry data
+loading_bias_correction 		= 1		# 1 = Yes; 0 = No;
+loading_bias_correction_method 	= 1	 	# 1 = mean; 2 = median;
+percentage_trimmed      		= 25	# total percentage of most variable intensities to be trimmed
+SNratio_for_correction 			= 10	# define the minimal signal (SN ratio) for the correction
+
+# Noise removal to reduce ratio compression in TMT 
+noise_removal_in_lightPSM 	= 1 # Noise correction by fully heavy reporters ; 1 = Yes; 0 = No;
+fully_heavy_reporters 		= sig126 
+noise_removal_in_heavyPSM 	= 1 # Noise correction by fully light reporters ; 1 = Yes; 0 = No;
+fully_light_reporters 		= sig127N; sig129C; sig132N
+NoiseThreshold_completely_labeled 		= 1
+NoiseThreshold_completely_unlabeled 		= 1
+nc_level 					= 0.75 ## Noise correction level ; may vary from 0.1 to 0.95; It prevents overcorrection
+
+# Peptide/Protein quantification by summarizing the light PSMs 
+PSM_selection 			= 10  # 5 = select top 5 PSMs; if using all PSMs, enter a big number e.g. 100000
+
+# Normalization of light% by protein amount in each channel obtained by non-Lys PSMs
+normalization 			= 1 # 1 = Normalize with MS1 intensity ratio (default); 2 = Normalize each channel in eavery PSM obtained using protein amount obtained by non-Lys PSMs;
+mass_tolerance_ms1 		= 10 	# m Tolerance for MS1 isotopic peaks 
+
+# when available, input the ms1 data quantification file and  prot_absQuna_byNonKpsm
+#ms1_quant 			    = /home/adasgupt/ms1quan.txt
+#pepIsoDist 		    = /home/adasgupt/pepIsoDist_batch1.txt
+#prot_absQuna_byNonKpsm = /home/adasgupt/prot_absQuna_byNonKpsm_batch1.txt
+
+# when available, input the di-Lys peptide isotopic distribution
+#pepIsoDist 		    = /home/adasgupt/pepIsoDist_batch1.txt
+
+
+trim_peptide_oulier_percent   = 10 # percenatge of outliers trimmed at peptide Lys%
+max_dist_bet_mixed_heavy_scan = 100 # maximum distance between mixed and heavy pepetide MS2 scan#
+
+# Outlier removal
+standard_outlier 		= 1   # remove outlier with generalized ESD and Dixson Q-test;1 = Yes; 0 = No; 
+
+summarize_protein_from_raw_data 	= 1 # 1 = PSM to peptide to protein (default), 2 = PSM to protein
+outlier_removal_stratagy 			= 2 # 1 = entire PSM is removed if ant channel is identified as an outlier (default);  2 = only outlier data is removed and other channels of PSM are used for summarization
+
+
+free_lysine_estimation = 1 # 1= yes; 0= no;
+
+
+########################################################
+# Parameters for the isotopic distribution calculation #
+########################################################
+#minimum isotopic match require to select reliable MS1 level quantification
+nMatchedPeaksThreshold  = 2
+
+isotope_cutoff 				= 1e-2  # Intensity cutoff to filter the isotopic peaks 
+mass_tolerance 				= 10 	# m Tolerance for merging close isotopic peaks 
+ms1_peak_extraction_method 	= 1		# 1 = strongest intensity; 2 = closest to expected peptide mass; only if multiple peaks detected within mass tolerance
+
+weighted_isotopic_ peaks 		= 1  # 1 = merge isotopic peaks within mass_tolerance using weighted average of intensity; = 0 otherwise
+method_merging_isotopic_peaks 	= 1  # Method of merging isotopic peaks within a tolerance, 1 = weighted average, 2 = strongest peak
+
+strong_isotopic_peaks = 0  # 1 = select strongest isotopic peaks within mass_tolerance  instead of merging isotopic peaks based on weighted average of intensity; = 0 otherwise
+
+Tracer_1 		= 13C            # Denoted by 13C or 15N
+Tracer_1_purity = 1 #0.99
+Tracer_2 		= 15N
+Tracer_2_purity = 1
+
+PTM_mono_oxidation 	= @    # Optional parameter, oxidation on methionine, M@
+PTM_phosphorylation = #   # Optional parameter, phosphorylation on STY with #, %, *
+
+########  END of Parameter file #################
+
