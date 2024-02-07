@@ -8,7 +8,8 @@
 •	Update the parameter file <br>
 •	Run the JUMPsilactmt program <br> 
 •	Output files <br> 
-•	Sample program for joining protein quantification data from two batches and performing a QC  and its sample parameter file <br>
+•	Sample program for joining protein quantification data from two batches and performing a QC <br>
+•	Parameter file for the sample program to join two batches <br> 
 •	Maintainers <br>
 •	Acknowledgments <br>
 •	References <br>
