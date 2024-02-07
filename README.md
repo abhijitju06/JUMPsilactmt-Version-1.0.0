@@ -73,6 +73,8 @@ A testing dataset with 100 proteins is available for each setting. Besides, the 
 •	Free Lys concentration (required, as setting 2 is the default in the current version)
 •	Lys concentration in individual proteins (optional)
 
+https://drive.google.com/file/d/1tro7nWyd2EGA7-yD5-QayMqfyNtgBl9o/view?usp=sharing
+
 ## Update the parameter file <br>
 The JUMPt program requires a parameter file (JUMPt.parms). The user must specify the following parameters in the 'JUMPt.params' file.
 •	JUMPt setting 
@@ -100,6 +102,8 @@ Figure 3
 
 ## Output file information <br>
 Two output Excel files are generated with the prefix 'results_Corrected_T50' and 'results_Apparent_T50' to the input file name. They will be rendered in the same folder where the input file is located. The results with proteins' corrected half-lives (in days) and confidence intervals will be saved to the output file. In addition, parameters used to calculate the half-lives will also be kept in the output file. Besides, the program will save the apparent half-lives in the output file.
+
+https://drive.google.com/file/d/1wCZjNtc-joWVWwsIhOwXu0oyqOoRFp1l/view?usp=sharing
 
 ## Maintainers <br>
 To submit bug reports and feature suggestions, please contact:
