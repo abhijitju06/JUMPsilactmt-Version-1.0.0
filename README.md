@@ -4,10 +4,11 @@
 •	Release notes <br>
 •	Software and Hardware Requirements <br>
 •	Installation <br>
-•	Input File Preparation <br>
+•	Input Files and their Preparation <br>
 •	Update the parameter file <br>
-•	Run the JUMPt program <br> 
-•	Output file <br> 
+•	Run the JUMPsilactmt program <br> 
+•	Output files <br> 
+•	Sample program to join protein quantification data from two batches and performing a QC <br>
 •	Maintainers <br>
 •	Acknowledgments <br>
 •	References <br>
