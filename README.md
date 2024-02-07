@@ -29,8 +29,9 @@ If each protein ($P$) had a synthesis rate ($S$) following zero-order kinetics, 
 
  
 Total $P_M$ (mixed) $=$ $S \times t  \times$  $H_A$% $\times$ $(1-H_A$% $) \times 2$ (as both Lys had an equal chance to be heavy) <br>
-Total $P_H$ (heavy) $= S \times t \times H_A$% $\times$ $H_A$%
-The ratio of the mixed to the heavy peptide { "R (="  P_M/P_H  ") = "  ("(1-HA%) " ×" 2" )/"HA%"   } was independent of synthesis rates. Thus,
+Total $P_H$ (heavy) $= S \times t \times H_A$% $\times$ $H_A$% <br>
+The ratio of the mixed to the heavy peptide ${ R (=  \frac{P_M}{P_H}  ) =   ((1-HA%)  ×2)/"HA%   }$ was independent of synthesis rates. <br>
+Thus,
                                          HA% = 2/((2+R))                                 
                                          LA% = 1-HA%
 We can use the above simple equations to derive the averaged LA% during the pulse (e.g., eight days) based on double-K-peptides. As the L% is dynamic, the L% on day 8 was not equal to the averaged LA% in 8 days. We should be able to fit the averaged LA% in 8 days to derive L% on day 8. 
