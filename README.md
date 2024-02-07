@@ -29,7 +29,7 @@ If each protein ($P$) had a synthesis rate ($S$) following zero-order kinetics, 
 
  
 Total $P_M$ (mixed) $=$ $S \times t  \times$  $H_A$% $\times$ $(1-H_A$% $) \times 2$ (as both Lys had an equal chance to be heavy) <br>
-Total $P_H$ (heavy) $= S \times t \times H_A$% $ \times H_A$%
+Total $P_H$ (heavy) $= S \times t \times H_A$% $\times$ $H_A$%
 The ratio of the mixed to the heavy peptide { "R (="  P_M/P_H  ") = "  ("(1-HA%) " ×" 2" )/"HA%"   } was independent of synthesis rates. Thus,
                                          HA% = 2/((2+R))                                 
                                          LA% = 1-HA%
