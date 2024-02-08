@@ -87,7 +87,7 @@ The JUMPsilactmt program requires multiple parameter files depending on the numb
 Here are the instructions to run the program. <br>
 Step 1: Copy all the files to your working folder on HPC. <br>
 Step-2: Update the '.params' file with input file names and other parameters as necessary.<br>
-Step-3: bsub -R "rusage[mem=15000]" -q standard -P Proteomics -Is bash <br>
+Step-3: bsub -R "rusage[mem=15000]" -q standard -P Proteomics -Is bash (Optional and it is system specific to assign more memory into your workspace) <br>
 Step-4: module load jump <br>
 Step-5: python JUMPsilactmt.py Batch1.params Batch2.params ... BatchN.params <br>
 • For example: If you have the sample parameter files, the command is: python JUMPsilactmt.py prot_quan_lysine_est_batch1.params prot_quan_lysine_est_batch2.params
