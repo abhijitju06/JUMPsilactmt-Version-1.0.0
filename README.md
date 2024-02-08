@@ -59,16 +59,17 @@ The program was written in Python (version 3.8.1) language. The program runs on 
 </div>
 
 ## Installation <br>
+<div align="justify"> 
 Installation of the script is not required. Download all the files/folders to any working directory (e.g., /home/usr/). 
+</div>
 
 
 
 ## Input File Preparation <br>
-A testing dataset with 100 proteins is available for each setting. Besides, the testing dataset for different time points is also available for default setting 2. Like the testing dataset, the user must prepare the input data file with the information below.
-•	pSILAC proteins (mandatory)
-•	pSILAC free (unbound) Lys (optional)
-•	Free Lys concentration (required, as setting 2 is the default in the current version)
-•	Lys concentration in individual proteins (optional)
+
+<div align="justify"> 
+Text Text
+</div>
 
 https://drive.google.com/file/d/1tro7nWyd2EGA7-yD5-QayMqfyNtgBl9o/view?usp=sharing
 
@@ -76,32 +77,20 @@ https://drive.google.com/file/d/1tro7nWyd2EGA7-yD5-QayMqfyNtgBl9o/view?usp=shari
 
 
 ## Update the parameter file <br>
-The JUMPt program requires a parameter file (JUMPt.parms). The user must specify the following parameters in the 'JUMPt.params' file.
-•	JUMPt setting 
-•	Input file name (along with the exact path)
-•	Bin size('bin_size') to fit proteins each time 
-•	MATLAB optimization algorithm
-•	Number of time points
-•	Purity of SILAC food 
-•	Whether the user wants to calculate the apparent half-life
+The JUMPsilactmt program requires multiple parameter files depending on the number of batches. We include some of the essential parameters below. The user can check the sample parameter files ("prot_quan_lysine_est_batch1.params" and "prot_quan_lysine_est_batch2.params" for samples from two batches) for other parameters and change accordingly.
 
-## Run the JUMPt program (Demo data set) <br>
-Launch the MATLAB software and open the JUMPt main program file "Run_Main_File.m" in it, as shown in Figure 2. Press the "Run' button, as shown in the figure, to start the program. Once the program begins, it will show the progress of protein fitting and the successful completion (Figure 3).
 
-![Figure2](https://github.com/abhijitju06/JUMPt/assets/34911992/8a4aeaf1-d008-4a23-a0e6-6ef08033c1ca)
-<p align="center">
-Figure 2
-</p>
+## Run the JUMPsilactmt program <br>
+<div align="justify"> 
+Text Text
+</div>
 
-Nonlinear fitting of proteins and Lys data using ODE is computationally expensive, especially when the protein data is enormous (e.g.,> 1000 proteins). We divide the proteins into sets with bin sizes between 10-100 to reduce the computational complexity. The program finds the optimal degradation rates (turnover rates or half-lives) by fitting protein data (in setting-1) and free-Lys data (in setting-2 and setting-3).
 
-![Figure3](https://github.com/abhijitju06/JUMPt/assets/34911992/d2bf25a5-32e6-43e0-a8fd-8117dd000fa0)
-<p align="center">
-Figure 3
-</p>
 
 ## Output file information <br>
-Two output Excel files are generated with the prefix 'results_Corrected_T50' and 'results_Apparent_T50' to the input file name. They will be rendered in the same folder where the input file is located. The results with proteins' corrected half-lives (in days) and confidence intervals will be saved to the output file. In addition, parameters used to calculate the half-lives will also be kept in the output file. Besides, the program will save the apparent half-lives in the output file.
+<div align="justify"> 
+Text Text
+</div>
 
 https://drive.google.com/file/d/1wCZjNtc-joWVWwsIhOwXu0oyqOoRFp1l/view?usp=sharing
 
