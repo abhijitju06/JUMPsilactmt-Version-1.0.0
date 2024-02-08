@@ -59,7 +59,7 @@ The program was written in Python (version 3.8.1) language. The program runs on 
 </div>
 
 ## Installation <br>
-Installation of the script is not required. Download all the files/folders to any working directory (e.g., /home/usr/JUMPt) as shown in Figure 1. 
+Installation of the script is not required. Download all the files/folders to any working directory (e.g., /home/usr/). 
 
 
 
@@ -71,6 +71,9 @@ A testing dataset with 100 proteins is available for each setting. Besides, the 
 •	Lys concentration in individual proteins (optional)
 
 https://drive.google.com/file/d/1tro7nWyd2EGA7-yD5-QayMqfyNtgBl9o/view?usp=sharing
+
+![image](https://github.com/abhijitju06/JUMPsilactmt-Version-1.0.0/assets/34911992/8d2d45cd-75c3-4178-a86a-9ae41cf7e6d1)
+
 
 ## Update the parameter file <br>
 The JUMPt program requires a parameter file (JUMPt.parms). The user must specify the following parameters in the 'JUMPt.params' file.
