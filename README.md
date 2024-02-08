@@ -77,7 +77,9 @@ https://drive.google.com/file/d/1tro7nWyd2EGA7-yD5-QayMqfyNtgBl9o/view?usp=shari
 
 
 ## Update the parameter file <br>
+<div align="justify"> 
 The JUMPsilactmt program requires multiple parameter files depending on the number of batches. We include some of the essential parameters below. The user can check the sample parameter files ("prot_quan_lysine_est_batch1.params" and "prot_quan_lysine_est_batch2.params" for samples from two batches) for other parameters and change accordingly.
+</div>
 
 
 ## Run the JUMPsilactmt program <br>
