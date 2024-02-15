@@ -24,7 +24,7 @@ The TMT noise correction process commenced with determining the minimum intensit
 </div>
  
 <div align="justify"> 
-In additiion to protein quantification, JUMPsilactmt was vital when an experimental measurement of the free lysine pSILAC ratio was unavailable. However, among all identified peptides, tiny portions of the peptides contained two Lys residues (i.e., double-K-peptides).  The double-K-peptides should have three peaks (light, mixed, and heavy). The light peak may also be generated from pre-existing light proteins. <br><br>
+In addition to protein quantification, JUMPsilactmt was vital when an experimental measurement of the free lysine pSILAC ratio was unavailable. However, among all identified peptides, tiny portions contained two Lys residues (i.e., double-K-peptides).  The double-K-peptides should have three peaks (light, mixed, and heavy). The light peak may also be generated from pre-existing light proteins. <br><br>
 </div>
 
 If each protein ($P$) had a synthesis rate ($S$) following zero-order kinetics, and $H_A$% was the averaged percentage of heavy K, considering time $t$, we can derive the following: <br>
@@ -68,12 +68,15 @@ Installation of the script is not required. Download all the files/folders to an
 ## Input File Preparation <br>
 
 <div align="justify"> 
-Text Text
+As shown in Figure 1, after metabolic labeling, tissue collection, and sample preparation, the LC/LC-MS/MS procedure generates the raw file, which is further converted to an mzXML file through a software tool, for example, msConvert. Then, one should run JUMP-search to identify heavy and light peptides from the SILAC database. The user should keep the search results in the working directory and filter them through JUMP-filter, followed by JUMP-batch-d programs. The search results and batch_id_results (kept in the same working directory) were the inputs of the JUMPsilactmt program. The user can download the sample input files from the link below.
 </div>
 
 https://drive.google.com/file/d/1tro7nWyd2EGA7-yD5-QayMqfyNtgBl9o/view?usp=sharing
 
 ![image](https://github.com/abhijitju06/JUMPsilactmt-Version-1.0.0/assets/34911992/8d2d45cd-75c3-4178-a86a-9ae41cf7e6d1)
+<p align="center">
+Figure 1
+</p>
 
 
 ## Update the parameter file <br>
