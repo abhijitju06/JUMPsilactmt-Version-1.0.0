@@ -1572,7 +1572,8 @@ if __name__ == "__main__":
                 psm_K2_mixed['nclevel'] = params["nc_level"]
                 psm_K2_mixed.loc[~((psm_K2_mixed['noise_channel'] == psm_K2_mixed['s_1lowest']) & ((psm_K2_mixed['s_2lowest'] - psm_K2_mixed['s_1lowest']) > psm_K2_mixed['s_min'])),'rescue_status']='rescued_1'
                 psm_K2_mixed['tmt_noise'] = psm_K2_mixed.apply(define_noise_in_each_PSM,axis=1)
-                psm_K2_mixed = psm_K2_mixed.assign(**d_heavy)
+		d_mixed = {cl: lambda x, cl=cl: x[cl] - x['tmt_noise']*np.float(params["NoiseThreshold_completely_unlabeled"]) for cl in reporters}
+                psm_K2_mixed = psm_K2_mixed.assign(**d_mixed)
              
                 print("\n  TMT noise correction has been performed for heavy and mixed labeling PSMs by the completely unlabeled channel (eg. day-0) quantification")
         
