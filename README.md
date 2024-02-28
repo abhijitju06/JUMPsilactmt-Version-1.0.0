@@ -88,7 +88,7 @@ The JUMPsilactmt program requires multiple parameter files depending on the numb
 •	Sample information in for each sets of pulse experiment; for example set1, set2, and set3 in the sample parameter files <br>
 •	noise_removal_in_lightPSM; Noise correction by fully heavy reporters ; 1 = Yes; 0 = No  <br> 
 •	noise_removal_in_heavyPSM; Noise correction by fully light reporters ; 1 = Yes; 0 = No  <br> 
-•	nc_level Noise correction level ; may vary from 0.1 to 0.95; It prevents overcorrection <br>
+•	nc_level; Noise correction level; may vary from 0.1 to 0.95; It prevents overcorrection <br>
 •	normalization; 1 = Normalize with MS1 intensity ratio (default); 2 = Normalize each channel in every PSM obtained using protein amount obtained by non-Lys PSMs  <br> 
 •	free_lysine_estimation; 1= yes; 0= no <br>
 •	ms1_peak_extraction_method; 1 = strongest intensity; 2 = closest to expected peptide mass; only if multiple peaks detected within mass tolerance  <br>
