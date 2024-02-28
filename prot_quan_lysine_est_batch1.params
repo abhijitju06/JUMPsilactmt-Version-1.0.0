@@ -48,7 +48,7 @@ nc_level 					= 0.75 ## Noise correction level ; may vary from 0.1 to 0.95; It p
 PSM_selection 			= 10  # 5 = select top 5 PSMs; if using all PSMs, enter a big number e.g. 100000
 
 # Normalization of light% by protein amount in each channel obtained by non-Lys PSMs
-normalization 			= 1 # 1 = Normalize with MS1 intensity ratio (default); 2 = Normalize each channel in eavery PSM obtained using protein amount obtained by non-Lys PSMs;
+normalization 			= 1 # 1 = Normalize with MS1 intensity ratio (default); 2 = Normalize each channel in every PSM obtained using protein amount obtained by non-Lys PSMs;
 mass_tolerance_ms1 		= 10 	# m Tolerance for MS1 isotopic peaks 
 
 # when available, input the ms1 data quantification file and  prot_absQuna_byNonKpsm
